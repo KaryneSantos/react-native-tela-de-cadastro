@@ -61,6 +61,10 @@ export default function App() {
       onPress={async () => {
         try {
           await schema.validate(usuario)
+          Toast.show("Cadastro feito com sucesso.", {
+            duration: Toast.durations.LONG,
+            position: Toast.positions.BOTTOM
+          });
         } catch (error) {
           Toast.show(error.message, {
             duration: Toast.durations.LONG,
